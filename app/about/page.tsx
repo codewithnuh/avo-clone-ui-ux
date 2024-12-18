@@ -1,4 +1,3 @@
-import ProfileCard from "@/components/pages/about/profile-card";
 import Team from "@/components/pages/about/sections/team";
 import AboutSection from "@/components/shared/about";
 import CTA from "@/components/shared/cta";

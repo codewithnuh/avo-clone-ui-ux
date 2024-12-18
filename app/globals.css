@@ -66,7 +66,7 @@ body {
     @apply font-bold uppercase text-2xl sm:text-4xl text-white md:text-5xl;
   }
   .h2 {
-    @apply font-extrabold text-2xl  text-zinc-900 uppercase sm:text-4xl text-center;
+    @apply font-[900] text-2xl  text-[#000000cc] uppercase sm:text-4xl text-center;
   }
   .h3 {
     @apply font-bold text-2xl  text-zinc-900 capitalize sm:text-4xl;

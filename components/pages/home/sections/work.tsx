@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import PaginationControl from "@/components/shared/pagination-control";
 
 interface WorkItem {
   title: string;
@@ -150,6 +151,7 @@ export default function WorksSection() {
           ))}
         </div>
       </div>
+      <PaginationControl />
     </section>
   );
 }
