@@ -1,6 +1,8 @@
-import AboutSection from "@/components/pages/home/sections/about";
+import AboutSection from "@/components/shared/about";
+import BlogSection from "@/components/pages/home/sections/blog";
 import Hero from "@/components/pages/home/sections/hero";
 import WorksSection from "@/components/pages/home/sections/work";
+import CTA from "@/components/shared/cta";
 import TestimonialsCarousel from "@/components/shared/testimonials";
 import React from "react";
 
@@ -11,6 +13,8 @@ const Home = () => {
       <AboutSection />
       <WorksSection />
       <TestimonialsCarousel />
+      <CTA />
+      <BlogSection />
     </>
   );
 };

@@ -84,8 +84,8 @@ const works: WorkItem[] = [
 
 export default function WorksSection() {
   return (
-    <section className="py-16 px-4 md:px-6 bg-accent">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-16 px-4 md:px-6  bg-accent">
+      <div className=" mx-auto container">
         <h2 className="h2 mb-12">OUR WORKS</h2>
 
         <div className="space-y-24">

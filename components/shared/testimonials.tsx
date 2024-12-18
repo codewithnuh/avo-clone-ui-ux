@@ -167,7 +167,7 @@ export default function TestimonialsCarousel(): React.ReactElement {
               key={testimonial.id}
               className="flex-none  px-2 w-full sm:w-1/2 lg:w-1/3"
             >
-              <Card className="relative shadow-md flex flex-col justify-between p-6 max-w-96 bg-white">
+              <Card className="relative shadow-sm flex flex-col justify-between p-6 max-w-96 bg-accent">
                 {/* Quote Icon Positioned Half on the Left Side */}
                 <FaQuoteLeft
                   size={38}

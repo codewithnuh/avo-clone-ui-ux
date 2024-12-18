@@ -1,8 +1,28 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { NAVIGATION_LINKS } from "@/constants";
+// { isScrolled }: { isScrolled: boolean }
+const Header = () => {
+  // State to track whether the page has been scrolled
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
-const Header = ({ isScrolled }: { isScrolled: boolean }) => {
+  // Track scroll position and update isScrolled state
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup scroll event listener
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header
       className={`fixed top-0 py-6 left-0 w-full transition-colors duration-300 z-50 ${
@@ -23,7 +43,16 @@ const Header = ({ isScrolled }: { isScrolled: boolean }) => {
               a<span className="text-primary">v</span>o
             </p>
           </Link>
-          <p className="text-primary">Menu</p>
+          <ul className="hidden sm:flex items-center space-x-4">
+            {NAVIGATION_LINKS.map((item, index) => (
+              <li key={index}>
+                <Link className="hover:text-primary uppercase" href={item.href}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="text-primary sm:hidden">Menu</p>
         </nav>
       </div>
     </header>
