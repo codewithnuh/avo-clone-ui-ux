@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/globals/header";
 import { Nunito_Sans } from "next/font/google";
-
+import NextTopLoader from "nextjs-toploader";
 const NunitoSans = Nunito_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -20,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${NunitoSans.className} antialiased`}>
+        <NextTopLoader showSpinner={false} color="hsl(347.37deg 100% 40.98%)" />
         <Header />
         {children}
       </body>

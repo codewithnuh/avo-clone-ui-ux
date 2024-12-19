@@ -2,6 +2,9 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import Image from "next/image";
+import { Search } from "lucide-react";
+import { blogData } from "@/constants";
 
 interface Category {
   name: string;
@@ -25,26 +28,7 @@ const categories: Category[] = [
   { name: "Branding", count: 16 },
 ];
 
-const recentPosts: RecentPost[] = [
-  {
-    title: "Amplify your blockchain team",
-    date: "Jul 22, 2020",
-    author: "Admin",
-    image: "/placeholder.svg?height=80&width=80",
-  },
-  {
-    title: "Amplify your blockchain team",
-    date: "Jul 22, 2020",
-    author: "Admin",
-    image: "/placeholder.svg?height=80&width=80",
-  },
-  {
-    title: "Amplify your blockchain team",
-    date: "Jul 22, 2020",
-    author: "Admin",
-    image: "/placeholder.svg?height=80&width=80",
-  },
-];
+const recentPosts = blogData.slice(0, 5);
 
 const tags = [
   "WEB",
@@ -65,8 +49,9 @@ export function BlogSidebar() {
         <Input
           type="search"
           placeholder="Search..."
-          className="w-full bg-background"
+          className="w-full bg-background pl-10" // Added left padding for the icon
         />
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
       </div>
 
       {/* Categories */}
@@ -99,17 +84,20 @@ export function BlogSidebar() {
         <h2 className="text-xl font-semibold mb-4">Recent Blog</h2>
         <div className="space-y-4">
           {recentPosts.map((post, index) => (
-            <Card key={index}>
+            <Card className="border-none shadow-none" key={index}>
               <CardContent className="p-4 flex gap-4">
-                <img
-                  src={post.image}
-                  alt=""
-                  className="w-20 h-20 object-cover rounded-md"
+                <Image
+                  width={1000}
+                  height={1000}
+                  src={post.mainImgUrl}
+                  alt="Blog post cover"
+                  className="w-20 h-20 object-cover "
                 />
                 <div className="space-y-1">
                   <h3 className="font-medium leading-none">{post.title}</h3>
                   <p className="text-sm text-muted-foreground">
-                    {post.date} • {post.author}
+                    <span className="text-muted-foreground">Jul 22, 2020</span>{" "}
+                    • {post.author}
                   </p>
                 </div>
               </CardContent>

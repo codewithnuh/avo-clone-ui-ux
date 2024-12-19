@@ -1,12 +1,8 @@
 import { BlogPost } from "@/components/pages/blog/components/blog-post";
 import { BlogSidebar } from "@/components/pages/blog/components/blog-sidebar";
 import Hero from "@/components/shared/hero";
-import MarkdownRenderer from "@/components/shared/markdown-renderer";
-import { Input } from "@/components/ui/input";
 import { blogData } from "@/constants";
-import { Search } from "lucide-react";
 import React from "react";
-
 const BlogPostPage = async ({
   params,
 }: {
@@ -19,7 +15,11 @@ const BlogPostPage = async ({
       <Hero pageTitle="Single BLog" />
       <div className="container mx-auto py-8 px-4">
         <div className="grid lg:grid-cols-[1fr,320px] gap-8">
-          <BlogPost content={blog[0].content} title={blog[0].title} />
+          <BlogPost
+            content={blog[0].content}
+            title={blog[0].title}
+            mainImg={blog[0].mainImgUrl}
+          />
           <BlogSidebar />
         </div>
       </div>

@@ -77,7 +77,7 @@ export const blogData = [
     author: "admin",
     summary:
       "Discover the top 10 actionable strategies to scale your small business efficiently. Learn how to optimize operations and increase profitability.",
-    mainImgUrl: "/images/business-growth.jpg",
+    mainImgUrl: "/images/blog-1.avif",
     content: `
 ### 10 Key Strategies for Growing Your Small Business  
 ## Learn More
@@ -126,7 +126,7 @@ Streamline processes, reduce unnecessary costs, and improve efficiency. Use tool
     author: "admin",
     summary:
       "Understand how a strong brand identity builds trust, attracts customers, and sets your business apart from competitors.",
-    mainImgUrl: "/images/branding-power.jpg",
+    mainImgUrl: "/images/blog-2.avif",
     content: `
 # The Power of Branding  
 
@@ -155,7 +155,7 @@ Invest in your brand. A strong identity gives your business a competitive edge a
     author: "admin",
     summary:
       "A detailed guide on creating a business plan that helps secure funding, sets clear goals, and drives growth.",
-    mainImgUrl: "/images/business-plan.jpg",
+    mainImgUrl: "/images/blog-3.avif",
     content: `
 # How to Craft a Winning Business Plan  
 
@@ -183,7 +183,7 @@ A well-crafted business plan is the foundation of any successful venture. It hel
     author: "admin",
     summary:
       "Stay ahead of the competition with the latest digital marketing trends that drive results in 2024.",
-    mainImgUrl: "/images/digital-marketing-trends.jpg",
+    mainImgUrl: "/images/blog-4.avif",
     content: `
 # Top Digital Marketing Trends for 2024  
 
@@ -206,7 +206,7 @@ To stay competitive, businesses must adopt these trends and innovate their marke
     author: "admin",
     summary:
       "Explore how effective financial management ensures profitability, sustainability, and long-term success.",
-    mainImgUrl: "/images/financial-management.jpg",
+    mainImgUrl: "/images/blog-2.avif",
     content: `
 # Why Financial Management is Crucial for Business Success  
 
@@ -231,7 +231,7 @@ Managing finances is one of the most critical aspects of running a successful bu
     author: "admin",
     summary:
       "Learn proven strategies to leverage social media platforms to engage your audience and drive sales.",
-    mainImgUrl: "/images/social-media-growth.jpg",
+    mainImgUrl: "/images/blog-1.avif",
     content: `
 # How to Leverage Social Media for Business Growth  
 

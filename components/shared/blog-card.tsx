@@ -8,11 +8,13 @@ const BlogCard = ({
   author,
   summary,
   slug,
+  imgUrl,
 }: {
   title: string;
   author: string;
   summary: string;
   slug: string;
+  imgUrl: string;
 }) => {
   return (
     <Card className="p-0 max-w-80 bg-transparent space-y-4 rounded-none shadow-none border-none">
@@ -21,7 +23,7 @@ const BlogCard = ({
       </CardTitle>
       <CardHeader className="p-0">
         <Image
-          src={"/images/work-1.webp"}
+          src={imgUrl}
           width={1000}
           height={1000}
           alt="Amplify your blockchain team"

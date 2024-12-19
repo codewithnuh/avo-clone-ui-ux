@@ -17,7 +17,7 @@ const comments: Comment[] = [
     date: "Jul 22, 2020 at 3:31pm",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor mauris non quam volutpat, quis pharetra dolor auctor. Sed efficitur feugiat lorem, quis dignissim quam cursus id. Lorem volutpat porttitor velit.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/images/person_2.webp",
     replies: [
       {
         id: 7,
@@ -25,7 +25,7 @@ const comments: Comment[] = [
         date: "Jul 22, 2020 at 4:15pm",
         content:
           "I completely agree with your point, John. The author's perspective on this topic is quite insightful.",
-        avatar: "/placeholder.svg?height=40&width=40",
+        avatar: "/images/person_1.webp",
       },
       {
         id: 8,
@@ -33,7 +33,7 @@ const comments: Comment[] = [
         date: "Jul 22, 2020 at 5:00pm",
         content:
           "Thanks for your input, Jane! I'm glad we're on the same page about this.",
-        avatar: "/placeholder.svg?height=40&width=40",
+        avatar: "/images/person_3.webp",
       },
     ],
   },
@@ -43,7 +43,7 @@ const comments: Comment[] = [
     date: "Jul 22, 2020 at 3:31pm",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor mauris non quam volutpat, quis pharetra dolor auctor. Sed efficitur feugiat lorem.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/images/person_1.webp",
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ const comments: Comment[] = [
     date: "Jul 22, 2020 at 3:31pm",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor mauris non quam volutpat, quis pharetra dolor auctor. Sed efficitur feugiat lorem, quis dignissim quam cursus id.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/images/person_4.webp",
     replies: [
       {
         id: 9,
@@ -59,7 +59,7 @@ const comments: Comment[] = [
         date: "Jul 23, 2020 at 9:45am",
         content:
           "I have a different perspective on this. While I see your point, I think we should also consider...",
-        avatar: "/placeholder.svg?height=40&width=40",
+        avatar: "/images/person_5.webp",
       },
     ],
   },
@@ -69,7 +69,7 @@ const comments: Comment[] = [
     date: "Jul 22, 2020 at 3:31pm",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor mauris non quam volutpat, quis pharetra dolor auctor.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/images/person_1.webp",
   },
   {
     id: 5,
@@ -77,7 +77,7 @@ const comments: Comment[] = [
     date: "Jul 22, 2020 at 3:31pm",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor mauris non quam volutpat, quis pharetra dolor auctor. Sed efficitur feugiat lorem.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/images/person_3.webp",
   },
   {
     id: 6,
@@ -85,7 +85,7 @@ const comments: Comment[] = [
     date: "Jul 22, 2020 at 3:31pm",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor mauris non quam volutpat, quis pharetra dolor auctor. Sed efficitur feugiat lorem, quis dignissim quam cursus id.",
-    avatar: "/placeholder.svg?height=40&width=40",
+    avatar: "/images/person_2.webp",
   },
 ];
 
@@ -98,8 +98,12 @@ function CommentItem({
 }) {
   return (
     <div className={`flex gap-4 ${isReply ? "ml-12 mt-4" : ""}`}>
-      <Avatar className="h-10 w-10">
-        <AvatarImage src={comment.avatar} alt={comment.author} />
+      <Avatar className="h-10 w-10 relative">
+        <AvatarImage
+          className="absolute -bottom-8"
+          src={comment.avatar}
+          alt={comment.author}
+        />
         <AvatarFallback>{comment.author[0]}</AvatarFallback>
       </Avatar>
       <div className="flex-1 space-y-2">

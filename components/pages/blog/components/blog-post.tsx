@@ -7,16 +7,18 @@ import MarkdownRenderer from "@/components/shared/markdown-renderer";
 export function BlogPost({
   title,
   content,
+  mainImg,
 }: {
   title: string;
   content: string;
+  mainImg: string;
 }) {
   return (
     <article className=" prose container overflow-hidden  mx-auto">
       <div className="space-y-8">
         <div className="space-y-4">
           <Image
-            src="/placeholder.svg?height=400&width=800"
+            src={mainImg}
             alt="Blog post cover"
             width={800}
             height={400}

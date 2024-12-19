@@ -10,12 +10,13 @@ const BlogSection = () => {
         <div className="py-5 grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-4">
           {blogData
             .slice(0, 4)
-            .map(({ author, slug, summary, title }, index) => (
+            .map(({ author, slug, summary, title, mainImgUrl }, index) => (
               <BlogCard
                 key={index}
                 author={author}
                 summary={summary}
                 slug={slug}
+                imgUrl={mainImgUrl}
                 title={title}
               />
             ))}
