@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { NAVIGATION_LINKS } from "@/constants";
-// { isScrolled }: { isScrolled: boolean }
+import { usePathname } from "next/navigation";
 const Header = () => {
   // State to track whether the page has been scrolled
+  const pathName = usePathname();
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   // Track scroll position and update isScrolled state
@@ -25,7 +26,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 py-6 left-0 w-full transition-colors duration-300 z-50 ${
+      className={`fixed top-0 py-4 left-0 w-full transition-colors duration-300 z-50 ${
         isScrolled
           ? "bg-white shadow-md text-black"
           : "bg-transparent text-white "
@@ -46,7 +47,12 @@ const Header = () => {
           <ul className="hidden sm:flex items-center space-x-4">
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
-                <Link className="hover:text-primary uppercase" href={item.href}>
+                <Link
+                  className={`${
+                    pathName === item.href ? "text-primary" : ""
+                  } hover:text-primary uppercase`}
+                  href={item.href}
+                >
                   {item.label}
                 </Link>
               </li>

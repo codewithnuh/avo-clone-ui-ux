@@ -79,7 +79,7 @@ const HeroCarousel = () => {
             {heroSlides.map((slide) => (
               <div
                 key={slide.id}
-                className="flex-none w-full h-full relative  bg-black/50 bg-blend-overlay bg-cover bg-center"
+                className="flex-none w-full h-full relative  bg-black/60 bg-blend-overlay bg-cover bg-center"
                 style={{
                   backgroundImage: `url(${slide.bgImage})`,
                 }}
@@ -87,13 +87,13 @@ const HeroCarousel = () => {
                 aria-label={`Slide ${slide.id}`}
               >
                 {/* Overlay Content */}
-                <div className="container absolute mb-20 sm:mb-0 inset-0 flex sm:flex-row  flex-col-reverse justify-between sm:items-center  text-white">
+                <div className="container absolute mb-36 sm:mb-0 inset-0 flex sm:flex-row  flex-col-reverse justify-between sm:items-center  text-white">
                   <div className=" flex flex-col justify-center items-start">
                     <h1 className="h1 max-w-lg sm:max-w-md">{slide.title}</h1>
                     <p className="text-lg mt-4 max-w-md">{slide.description}</p>
                     <Button className="mt-6">{slide.cta}</Button>
                   </div>
-                  <div className="mt-28 text-sm  sm:mb-40">
+                  <div className="mt-60 text-sm  sm:mb-96">
                     <p
                       className="font-bold text-2xl sm:text-5xl border-l-4 sm:border-l-0 px-2 sm:border-r-8
                      border-primary"

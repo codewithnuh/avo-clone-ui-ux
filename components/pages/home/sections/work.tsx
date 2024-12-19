@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import PaginationControl from "@/components/shared/pagination-control";
 
 interface WorkItem {
   title: string;
@@ -85,7 +84,22 @@ const works: WorkItem[] = [
 
 export default function WorksSection() {
   return (
-    <section className="py-16 px-4 md:px-6  bg-accent">
+    <section className="py-28 px-4 md:px-6 relative  bg-accent">
+      <div className="custom-shape-divider-top-1734527401">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          fill="white"
+          preserveAspectRatio="none"
+          className="!fill-white"
+        >
+          <path
+            d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"
+            className="fill-accent"
+          ></path>
+        </svg>
+      </div>
       <div className=" mx-auto container">
         <h2 className="h2 mb-12">OUR WORKS</h2>
 
@@ -151,7 +165,6 @@ export default function WorksSection() {
           ))}
         </div>
       </div>
-      <PaginationControl />
     </section>
   );
 }

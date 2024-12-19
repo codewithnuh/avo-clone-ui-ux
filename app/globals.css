@@ -61,6 +61,48 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
+.custom-shape-divider-top-1734527401 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1734527401 svg {
+  position: relative;
+  display: block;
+  width: calc(166% + 1.3px);
+  height: 143px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1734527401 .shape-fill {
+  fill: #ffffff;
+}
+/* testimonials */
+.custom-shape-divider-top-1734527970 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1734527970 svg {
+  position: relative;
+  display: block;
+  width: calc(258% + 1.3px);
+  height: 66px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1734527970 .shape-fill {
+  fill: hsl(0 0% 96.1%);
+}
 @layer utilities {
   .h1 {
     @apply font-bold uppercase text-2xl sm:text-4xl text-white md:text-5xl;

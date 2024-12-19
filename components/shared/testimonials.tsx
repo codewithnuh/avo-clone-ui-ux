@@ -156,8 +156,21 @@ export default function TestimonialsCarousel(): React.ReactElement {
     useDotButton(emblaApi);
 
   return (
-    <section className="container max-w-7xl mx-auto py-10">
-      <h2 className="h2 mb-20">Clients Says About Us?</h2>
+    <section className="container max-w-7xl relative mx-auto py-10">
+      <div className="custom-shape-divider-top-1734527970">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M1200 0L0 0 892.25 114.72 1200 0z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <h2 className="h2 mt-20 mb-20">Clients Says About Us?</h2>
 
       {/* Embla Carousel */}
       <div className="overflow-clip py-6" ref={emblaRef}>
