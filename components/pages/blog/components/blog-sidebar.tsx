@@ -11,13 +11,6 @@ interface Category {
   count: number;
 }
 
-interface RecentPost {
-  title: string;
-  date: string;
-  author: string;
-  image: string;
-}
-
 const categories: Category[] = [
   { name: "Web Development", count: 15 },
   { name: "Web Design", count: 22 },
