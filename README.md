@@ -13,7 +13,7 @@
   <h3 align="center">AVO - Clone UI - UX</h3>
 
    <div align="center">
-    A modern UI/UX clone of Hepta with smooth animations using Framer Motion and a responsive design built with TailwindCSS.
+    A modern UI/UX clone of AVO Colorlib smooth animations using Framer Motion and a responsive design built with TailwindCSS.
    </div>
 </div>
 
