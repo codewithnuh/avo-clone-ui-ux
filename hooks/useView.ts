@@ -1,11 +1,16 @@
 "use client";
 import { useState, useEffect, useRef, RefObject } from "react";
 
+/**
+ * Hook to track whether an element is in view
+ * @param options IntersectionObserver options
+ * @returns [ref, isIntersecting]
+ */
 export function useInView<T extends Element>(
   options: IntersectionObserverInit = { threshold: 0.1 }
-): [RefObject<T>, boolean] {
+): [RefObject<T | null>, boolean] {
   const [isIntersecting, setIntersecting] = useState(false);
-  const ref = useRef<T>(null);
+  const ref = useRef<T | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
