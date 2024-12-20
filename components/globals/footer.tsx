@@ -9,6 +9,7 @@ import {
   FaPhone,
   FaTwitter,
 } from "react-icons/fa";
+import { ScrollAnimation } from "../shared/scroll-animation";
 
 const Footer = () => {
   return (
@@ -32,21 +33,23 @@ const Footer = () => {
           <div className="space-y-3 h-full">
             <h3 className="font-bold my-3 text-lg">avo</h3>
             <p>Lorem ipsum it quia harum optio ipsum,ate magni!</p>
-            <ul>
-              <li>
-                <div className="flex space-x-4 items-center">
-                  <div className="bg-gray-700 rounded-full p-2">
-                    <FaTwitter size={20} className="fill-gray-400" />
+            <ScrollAnimation>
+              <ul>
+                <li>
+                  <div className="flex space-x-4 items-center">
+                    <div className="bg-gray-700 rounded-full p-2">
+                      <FaTwitter size={20} className="fill-gray-400" />
+                    </div>
+                    <div className="bg-gray-700 rounded-full p-2">
+                      <FaFacebook size={20} className="fill-gray-400" />
+                    </div>
+                    <div className="bg-gray-700 rounded-full p-2">
+                      <FaInstagram size={20} className="fill-gray-400" />
+                    </div>
                   </div>
-                  <div className="bg-gray-700 rounded-full p-2">
-                    <FaFacebook size={20} className="fill-gray-400" />
-                  </div>
-                  <div className="bg-gray-700 rounded-full p-2">
-                    <FaInstagram size={20} className="fill-gray-400" />
-                  </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </ScrollAnimation>
           </div>
 
           {/* Dynamic Columns from FOOTER_LINKS */}

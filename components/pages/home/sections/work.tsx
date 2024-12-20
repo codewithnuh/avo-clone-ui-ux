@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { WORKS } from "@/constants";
+import { ScrollAnimation } from "@/components/shared/scroll-animation";
 export default function WorksSection() {
   const pathName = usePathname();
   return (
@@ -60,35 +61,39 @@ export default function WorksSection() {
                     : "md:order-1 md:text-right"
                 }`}
               >
-                <p className="text-sm text-gray-600">{work.category}</p>
-                <h3 className="text-2xl font-medium">{work.title}</h3>
-                <p className="text-gray-600">{work.description}</p>
-                <div
-                  className={`flex items-center gap-3 ${
-                    index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-                  }`}
-                >
-                  <Avatar className="h-16 w-16">
-                    <AvatarImage
-                      src={work.author.avatar}
-                      alt={work.author.name}
-                    />
-                    <AvatarFallback>JJ</AvatarFallback>
-                  </Avatar>
-                  <div className="inline-flex flex-col text-left ">
-                    <span className="text-sm text-gray-800">
-                      {work.author.name}
-                    </span>
-                    <span className="text-sm text-gray-600">avo.com</span>
+                <ScrollAnimation>
+                  <p className="text-sm text-gray-600">{work.category}</p>
+                  <h3 className="text-2xl font-medium">{work.title}</h3>
+                  <p className="text-gray-600">{work.description}</p>
+                  <div
+                    className={`flex items-center gap-3 ${
+                      index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+                    }`}
+                  >
+                    <Avatar className="h-16 w-16">
+                      <AvatarImage
+                        src={work.author.avatar}
+                        alt={work.author.name}
+                      />
+                      <AvatarFallback>JJ</AvatarFallback>
+                    </Avatar>
+                    <div className="inline-flex flex-col text-left ">
+                      <span className="text-sm text-gray-800">
+                        {work.author.name}
+                      </span>
+                      <span className="text-sm text-gray-600">avo.com</span>
+                    </div>
                   </div>
-                </div>
-                <div
-                  className={index % 2 === 0 ? "md:text-left" : "md:text-right"}
-                >
-                  <Button variant="outline" className="mt-4">
-                    VIEW PORTFOLIO
-                  </Button>
-                </div>
+                  <div
+                    className={
+                      index % 2 === 0 ? "md:text-left" : "md:text-right"
+                    }
+                  >
+                    <Button variant="outline" className="mt-4">
+                      VIEW PORTFOLIO
+                    </Button>
+                  </div>
+                </ScrollAnimation>
               </div>
               <div
                 className={`aspect-[4/3] sm:aspect-[6/5.8] shadow-md relative ${

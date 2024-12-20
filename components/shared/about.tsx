@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 import { FaCode, FaDesktop, FaMobile, FaSearch, FaUikit } from "react-icons/fa";
+import { ScrollAnimation } from "./scroll-animation";
+
 const AboutSection = () => {
   const SERVICES = [
     {
@@ -26,8 +28,9 @@ const AboutSection = () => {
       icon: <FaSearch className="w-10 h-10" />,
     },
   ];
+
   return (
-    <section className="relative py-32 mb-20">
+    <section className=" relative py-32 mb-20">
       <div className="custom-shape-divider-top-1734607782 z-10 !top-[-103px]">
         <svg
           data-name="Layer 1"
@@ -41,34 +44,41 @@ const AboutSection = () => {
           ></path>
         </svg>
       </div>
-      <div className="container  space-y-20">
-        <h2 className="h2">About Us</h2>
-        <div className="my-6 grid grid-cols-1  md:grid-cols-5 gap-2 ">
-          {SERVICES.map((service, index) => (
-            <div
-              key={index}
-              className="flex flex-col space-y-2 items-center justify-center"
-            >
-              {/* <FaUikit className="w-10 h-10" />
-               */}
-              {service.icon}
-              <p className="font-semibold">{service.title}</p>
-            </div>
-          ))}
-        </div>
-        <div className="my-6 grid grid-cols-1 space-y-4 md:space-y-0  md:grid-cols-3 md:gap-x-6">
-          <div className="aspect-[4/3] md:aspect-auto md:order-2 relative">
-            <Image
-              src={"/images/about.webp"}
-              fill
-              className="object-cover rounded-lg"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              alt="About"
-            />
+      <div className="container space-y-20">
+        <ScrollAnimation>
+          <h2 className="h2">About Us</h2>
+        </ScrollAnimation>
+
+        <ScrollAnimation delay={0.2}>
+          <div className="my-6 grid grid-cols-1 md:grid-cols-5 gap-2">
+            {SERVICES.map((service, index) => (
+              <div
+                key={index}
+                className="flex flex-col space-y-2 items-center justify-center"
+              >
+                {service.icon}
+                <p className="font-semibold">{service.title}</p>
+              </div>
+            ))}
           </div>
-          <div className="md:!text-right md:order-1">
+        </ScrollAnimation>
+
+        <div className="my-6 grid grid-cols-1 space-y-4 md:space-y-0 md:grid-cols-3 md:gap-x-6">
+          <ScrollAnimation delay={0.3} className="md:order-2">
+            <div className="relative w-full h-[300px] md:h-[400px]">
+              <Image
+                src="/images/about.webp"
+                fill
+                className="object-cover rounded-lg"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="About"
+              />
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation delay={0.4} className="md:!text-right md:order-1">
             <h3 className="h3">
-              Welcome to AVO A Personal Porfolio Web Agency
+              Welcome to AVO A Personal Portfolio Web Agency
             </h3>
             <p className="p-text mt-3">
               Separated they live in Bookmarksgrove right at the coast of the
@@ -77,8 +87,9 @@ const AboutSection = () => {
               is a paradisematic country, in which roasted parts of sentences
               fly into your mouth.
             </p>
-          </div>
-          <div className="md:order-3">
+          </ScrollAnimation>
+
+          <ScrollAnimation delay={0.5} className="md:order-3">
             <p className="p-text">
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
@@ -89,50 +100,55 @@ const AboutSection = () => {
               into your mouth.
             </p>
             <Button className="mt-3">View All Projects</Button>
-          </div>
-          {/* <div className="my-4 text-left space-y-4">
-        </div> */}
+          </ScrollAnimation>
         </div>
-        <ul className="flex sm:flex-row items-center justify-center space-x-2 mt-20 flex-col">
-          <li className="flex space-x-8 items-center">
-            <div className="flex flex-col space-y-4">
-              <span className="text-5xl font-semibold text-primary">01</span>
-              <div className="border-b border-primary" />
-            </div>
-            <div>
-              <p className="text-zinc-800 font-semibold text-lg">
-                Search Engine Optimization
-              </p>
-              <p className="p-text">Far far away, behind the word mountains</p>
-            </div>
-          </li>
-          {/* 2 */}
-          <li className="flex space-x-8 items-center">
-            <div className="flex flex-col space-y-4">
-              <span className="text-5xl font-semibold text-primary">02</span>
-              <div className="border-b border-primary" />
-            </div>
-            <div>
-              <p className="text-zinc-800 font-semibold text-lg">
-                Search Engine Optimization
-              </p>
-              <p className="p-text">Far far away, behind the word mountains</p>
-            </div>
-          </li>
-          {/* 3 */}
-          <li className="flex space-x-8 items-center">
-            <div className="flex flex-col space-y-4">
-              <span className="text-5xl font-semibold text-primary">03</span>
-              <div className="border-b border-primary" />
-            </div>
-            <div>
-              <p className="text-zinc-800 font-semibold text-lg">
-                Search Engine Optimization
-              </p>
-              <p className="p-text">Far far away, behind the word mountains</p>
-            </div>
-          </li>
-        </ul>
+
+        <ScrollAnimation delay={0.6}>
+          <ul className="flex sm:flex-row items-center justify-center space-x-2 mt-20 flex-col">
+            <li className="flex space-x-8 items-center">
+              <div className="flex flex-col space-y-4">
+                <span className="text-5xl font-semibold text-primary">01</span>
+                <div className="border-b border-primary" />
+              </div>
+              <div>
+                <p className="text-zinc-800 font-semibold text-lg">
+                  Search Engine Optimization
+                </p>
+                <p className="p-text">
+                  Far far away, behind the word mountains
+                </p>
+              </div>
+            </li>
+            <li className="flex space-x-8 items-center">
+              <div className="flex flex-col space-y-4">
+                <span className="text-5xl font-semibold text-primary">02</span>
+                <div className="border-b border-primary" />
+              </div>
+              <div>
+                <p className="text-zinc-800 font-semibold text-lg">
+                  Search Engine Optimization
+                </p>
+                <p className="p-text">
+                  Far far away, behind the word mountains
+                </p>
+              </div>
+            </li>
+            <li className="flex space-x-8 items-center">
+              <div className="flex flex-col space-y-4">
+                <span className="text-5xl font-semibold text-primary">03</span>
+                <div className="border-b border-primary" />
+              </div>
+              <div>
+                <p className="text-zinc-800 font-semibold text-lg">
+                  Search Engine Optimization
+                </p>
+                <p className="p-text">
+                  Far far away, behind the word mountains
+                </p>
+              </div>
+            </li>
+          </ul>
+        </ScrollAnimation>
       </div>
     </section>
   );

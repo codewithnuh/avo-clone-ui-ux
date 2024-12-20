@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
 import { usePathname } from "next/navigation";
+import { ScrollAnimation } from "./scroll-animation";
 // Type definition for the dot button hook return value
 type UseDotButtonType = {
   selectedIndex: number;
@@ -171,50 +172,56 @@ export default function TestimonialsCarousel(): React.ReactElement {
           ></path>
         </svg>
       </div>
-      <h2 className="h2 mt-20 mb-20">Clients Says About Us?</h2>
+      <ScrollAnimation>
+        <h2 className="h2 mt-20 mb-20">Clients Says About Us?</h2>
+      </ScrollAnimation>
 
       {/* Embla Carousel */}
-      <div className="overflow-clip py-6" ref={emblaRef}>
-        <div className="flex">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="flex-none  px-2 w-full sm:w-1/2 lg:w-1/3"
-            >
-              <Card className="relative shadow-sm flex flex-col justify-between p-6 max-w-96 bg-accent">
-                {/* Quote Icon Positioned Half on the Left Side */}
-                <FaQuoteLeft
-                  size={38}
-                  className="absolute -top-6 left-4 text-primary "
-                />
+      <ScrollAnimation>
+        <div className="overflow-clip py-6" ref={emblaRef}>
+          <div className="flex">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="flex-none  px-2 w-full sm:w-1/2 lg:w-1/3"
+              >
+                <Card className="relative shadow-sm flex flex-col justify-between p-6 max-w-96 bg-accent">
+                  {/* Quote Icon Positioned Half on the Left Side */}
+                  <FaQuoteLeft
+                    size={38}
+                    className="absolute -top-6 left-4 text-primary "
+                  />
 
-                <CardContent className="text-left flex flex-col space-y-6 h-full">
-                  <p className="text-gray-700 leading-relaxed">
-                    {testimonial.review}
-                  </p>
-                  <div className="flex items-center">
-                    <div className="w-16 h-16 rounded-full overflow-hidden">
-                      <Image
-                        src={testimonial.profileImage}
-                        alt={testimonial.name}
-                        width={64}
-                        height={64}
-                        className="object-cover"
-                      />
+                  <CardContent className="text-left flex flex-col space-y-6 h-full">
+                    <p className="text-gray-700 leading-relaxed">
+                      {testimonial.review}
+                    </p>
+                    <div className="flex items-center">
+                      <div className="w-16 h-16 rounded-full overflow-hidden">
+                        <Image
+                          src={testimonial.profileImage}
+                          alt={testimonial.name}
+                          width={64}
+                          height={64}
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="text-left ml-4">
+                        <h3 className="font-bold text-lg">
+                          {testimonial.name}
+                        </h3>
+                        <p className="text-gray-500 text-sm">
+                          {testimonial.position}
+                        </p>
+                      </div>
                     </div>
-                    <div className="text-left ml-4">
-                      <h3 className="font-bold text-lg">{testimonial.name}</h3>
-                      <p className="text-gray-500 text-sm">
-                        {testimonial.position}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          ))}
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </ScrollAnimation>
 
       {/* Navigation Dots */}
       <div className="flex justify-center mt-6">

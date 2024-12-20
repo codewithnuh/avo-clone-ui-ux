@@ -9,7 +9,7 @@ const ProfileCard = ({
   imgUrl,
 }: ProfileCardProps) => {
   return (
-    <Card className="p-0 border-0 rounded-none  h-96 w-56  shadow-none">
+    <Card className="p-0 border-0 rounded-none  sm:h-96 sm:w-56  shadow-none">
       <CardContent className="p-0">
         <div className=" bg-gradient-to-tr from-[#676767] to-transparent">
           <Image
