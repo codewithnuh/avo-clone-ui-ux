@@ -1,5 +1,6 @@
 "use client";
 
+import { ScrollAnimation } from "@/components/shared/scroll-animation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,14 +10,18 @@ export default function ContactForm() {
   return (
     <div className="container mx-auto mb-36  px-4 py-16 max-w-6xl">
       <div className="text-center mb-12 space-y-4">
-        <span className="text-sm text-primary uppercase tracking-wider">
-          Contact us
-        </span>
-        <h2 className="h2 ">HAVE A PROJECT?</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          Far far away, behind the word mountains, far from the countries
-          Vokalia and Consonantia
-        </p>
+        <ScrollAnimation>
+          <span className="text-sm text-primary uppercase tracking-wider">
+            Contact us
+          </span>
+        </ScrollAnimation>
+        <ScrollAnimation>
+          <h2 className="h2 ">HAVE A PROJECT?</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia
+          </p>
+        </ScrollAnimation>
       </div>
 
       <div className="grid lg:grid-cols-[1fr,auto] gap-12">
@@ -48,51 +53,53 @@ export default function ContactForm() {
         </div>
 
         <div className="space-y-8 p-8">
-          <div className="space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="bg-primary p-2 rounded-full text-white">
-                <MapPin className="h-5 w-5" />
+          <ScrollAnimation>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="bg-primary p-2 rounded-full text-white">
+                  <MapPin className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-medium mb-1">Address:</h3>
+                  <p className="text-muted-foreground">
+                    198 West 21th Street, Suite 721
+                    <br />
+                    New York NY 10016
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-medium mb-1">Address:</h3>
-                <p className="text-muted-foreground">
-                  198 West 21th Street, Suite 721
-                  <br />
-                  New York NY 10016
-                </p>
-              </div>
-            </div>
 
-            <div className="flex items-start gap-4">
-              <div className="bg-primary p-2 rounded-full text-white">
-                <Phone className="h-5 w-5" />
+              <div className="flex items-start gap-4">
+                <div className="bg-primary p-2 rounded-full text-white">
+                  <Phone className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-medium mb-1">Phone:</h3>
+                  <p className="text-primary">+ 1235 2355 98</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-medium mb-1">Phone:</h3>
-                <p className="text-primary">+ 1235 2355 98</p>
-              </div>
-            </div>
 
-            <div className="flex items-start gap-4">
-              <div className="bg-primary p-2 rounded-full text-white">
-                <Mail className="h-5 w-5" />
+              <div className="flex items-start gap-4">
+                <div className="bg-primary p-2 rounded-full text-white">
+                  <Mail className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-medium mb-1">Email:</h3>
+                  <p className="text-primary">info@yoursite.com</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-medium mb-1">Email:</h3>
-                <p className="text-primary">info@yoursite.com</p>
-              </div>
-            </div>
 
-            <div className="flex items-start gap-4">
-              <div className="bg-primary p-2 rounded-full text-white">
-                <Globe className="h-5 w-5" />
-              </div>
-              <div>
-                <h3 className="font-medium mb-1">Website:</h3>
-                <p className="text-primary">yoursite.com</p>
+              <div className="flex items-start gap-4">
+                <div className="bg-primary p-2 rounded-full text-white">
+                  <Globe className="h-5 w-5" />
+                </div>
+                <div>
+                  <h3 className="font-medium mb-1">Website:</h3>
+                  <p className="text-primary">yoursite.com</p>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollAnimation>
         </div>
       </div>
 

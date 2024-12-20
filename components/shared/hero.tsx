@@ -5,7 +5,7 @@ const Hero = ({ pageTitle }: { pageTitle: string }) => {
   return (
     <section className="h-screen  bg-[url('/images/bg_2.webp')] bg-fixed bg-black/50 bg-blend-overlay bg bg-center bg-cover">
       <div className="relative">
-        <div className="custom-shape-divider-top-1734607782 z-10 !top-[32rem]  ">
+        {/* <div className="custom-shape-divider-top-1734607782 z-10 !top-[32rem]  ">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -17,9 +17,9 @@ const Hero = ({ pageTitle }: { pageTitle: string }) => {
               className="fill-white"
             ></path>
           </svg>
-        </div>
+        </div> */}
         <div className="container relative">
-          <div className="relative flex flex-col justify-center items-start space-y-4 text-white top-96">
+          <div className="relative flex flex-col justify-center items-start space-y-4 text-white top-80">
             <div className="flex items-center space-x-2 uppercase">
               <Link href={"/"}>Home</Link>
 
