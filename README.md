@@ -1,7 +1,8 @@
 
 
 <div align="center">
-  <img src="https://avo-clone-ui-ux.vercel.app/images/readme.png" width="1080" height="720"/>
+  <img src="https://avo-clone-ui-ux.vercel.app/images/readme.png" />
+
   <div>
     <img src="https://img.shields.io/badge/-React-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="React" />
     <img src="https://img.shields.io/badge/-Next_JS_15-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="Next.js" />
