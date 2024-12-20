@@ -17,11 +17,11 @@ const BlogCard = ({
   imgUrl: string;
 }) => {
   return (
-    <Card className="p-0 max-w-80 bg-transparent space-y-4 rounded-none shadow-none border-none">
+    <Card className="p-0 max-w-80  bg-transparent space-y-4 rounded-none shadow-none border-none">
       <CardTitle className="font-medium text-xl ">
         <Link href={`/blog/${slug}`}>{title.slice(0, 40) + "..."}</Link>
       </CardTitle>
-      <CardHeader className="p-0">
+      <CardHeader className="p-0 aspect-[4/3]">
         <Image
           src={imgUrl}
           width={1000}

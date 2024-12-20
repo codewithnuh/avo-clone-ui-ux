@@ -103,9 +103,95 @@ body {
 .custom-shape-divider-top-1734527970 .shape-fill {
   fill: hsl(0 0% 96.1%);
 }
+/* Footer */
+.custom-shape-divider-top-1734593799 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1734593799 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 103px;
+}
+
+.custom-shape-divider-top-1734593799 .shape-fill {
+  fill: #ffffff;
+}
+/* Blog section */
+.custom-shape-divider-top-1734607033 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1734607033 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1734607033 .shape-fill {
+  fill: #ffffff;
+}
+/* work section */
+.custom-shape-divider-top-1734607374 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+/* about section */
+.custom-shape-divider-top-1734607782 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  rotate: 360deg;
+}
+
+.custom-shape-divider-top-1734607782 svg {
+  position: relative;
+  display: block;
+  width: calc(220% + 1.3px);
+  height: 106px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1734607782 .shape-fill {
+  fill: #362626;
+}
+
+.custom-shape-divider-top-1734607374 svg {
+  position: relative;
+  display: block;
+  width: calc(172% + 1.3px);
+  height: 101px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1734607374 .shape-fill {
+  fill: #ffffff;
+}
 @layer utilities {
   .h1 {
-    @apply font-bold uppercase text-2xl sm:text-4xl text-white md:text-5xl;
+    @apply font-[900] uppercase text-2xl sm:text-4xl text-white md:text-5xl;
   }
   .h2 {
     @apply font-[900] text-2xl  text-[#000000cc] uppercase sm:text-4xl text-center;

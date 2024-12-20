@@ -8,7 +8,9 @@ const BlogPage = () => {
     <div>
       <Hero pageTitle="Blog" />
       <BlogSection />
-      <PaginationControl />
+      <div className="mb-36">
+        <PaginationControl />
+      </div>
     </div>
   );
 };

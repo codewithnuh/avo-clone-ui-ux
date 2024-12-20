@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/pagination";
 const PaginationControl = () => {
   return (
-    <div className="mt-40">
+    <div className="mb-36">
       <Pagination>
         <PaginationContent>
           <PaginationItem>

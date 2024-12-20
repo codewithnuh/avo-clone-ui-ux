@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
@@ -26,7 +27,20 @@ const AboutSection = () => {
     },
   ];
   return (
-    <section className="before:relative before:skew-y-3 after:relative after:skew-x-3 after:bottom-[128rem] after:w-[40%] after:left-[14rem] after:rotate-[163deg] after:h-10 after:bg-blue-500 before:top-[-135px] before:w-[80%] before:h-10 before:bg-white before:block   py-32 mb-20">
+    <section className="relative py-32 mb-20">
+      <div className="custom-shape-divider-top-1734607782 z-10 !top-[-103px]">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"
+            className="fill-white"
+          ></path>
+        </svg>
+      </div>
       <div className="container  space-y-20">
         <h2 className="h2">About Us</h2>
         <div className="my-6 grid grid-cols-1  md:grid-cols-5 gap-2 ">

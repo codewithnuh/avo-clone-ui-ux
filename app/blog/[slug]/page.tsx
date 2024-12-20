@@ -13,7 +13,7 @@ const BlogPostPage = async ({
   return (
     <div>
       <Hero pageTitle="Single BLog" />
-      <div className="container mx-auto py-8 px-4">
+      <div className="container mx-auto py-8 px-4 mb-36191">
         <div className="grid lg:grid-cols-[1fr,320px] gap-8">
           <BlogPost
             content={blog[0].content}

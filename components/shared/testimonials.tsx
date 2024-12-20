@@ -13,7 +13,7 @@ import { EmblaCarouselType } from "embla-carousel";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
-
+import { usePathname } from "next/navigation";
 // Type definition for the dot button hook return value
 type UseDotButtonType = {
   selectedIndex: number;
@@ -145,6 +145,7 @@ const testimonials: Testimonial[] = [
 
 // Main testimonials carousel component
 export default function TestimonialsCarousel(): React.ReactElement {
+  const pathName = usePathname();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     align: "start",
@@ -156,7 +157,7 @@ export default function TestimonialsCarousel(): React.ReactElement {
     useDotButton(emblaApi);
 
   return (
-    <section className="container max-w-7xl relative mx-auto py-10">
+    <section className="container max-w-7xl relative mx-auto py-10 mb-36">
       <div className="custom-shape-divider-top-1734527970">
         <svg
           data-name="Layer 1"
@@ -166,7 +167,7 @@ export default function TestimonialsCarousel(): React.ReactElement {
         >
           <path
             d="M1200 0L0 0 892.25 114.72 1200 0z"
-            className="shape-fill"
+            className={`${pathName == "/about" ? "fill-white" : "shape-fill"}`}
           ></path>
         </svg>
       </div>

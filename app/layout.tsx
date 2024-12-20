@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/globals/header";
 import { Nunito_Sans } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
+import Footer from "@/components/globals/footer";
 const NunitoSans = Nunito_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <NextTopLoader showSpinner={false} color="hsl(347.37deg 100% 40.98%)" />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

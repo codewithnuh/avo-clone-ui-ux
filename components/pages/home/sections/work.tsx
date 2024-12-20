@@ -1,90 +1,30 @@
+"use client";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-
-interface WorkItem {
-  title: string;
-  category: string;
-  description: string;
-  author: {
-    name: string;
-    avatar: string;
-  };
-  image: string;
-}
-
-const works: WorkItem[] = [
-  {
-    title: "Cassette tape",
-    category: "Web Design",
-    description:
-      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    author: {
-      name: "Jamie Jameson",
-      avatar: "/images/person_1.webp",
-    },
-    image: "/images/work-1.webp",
-  },
-  {
-    title: "Miniwall Clock",
-    category: "Product Design",
-    description:
-      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    author: {
-      name: "Jamie Jameson",
-      avatar: "/images/person_2.webp",
-    },
-    image: "/images/work-2.webp",
-  },
-  {
-    title: "Avo Portfolio Agency",
-    category: "Web Design",
-    description:
-      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    author: {
-      name: "Jamie Jameson",
-      avatar: "/images/person_3.webp",
-    },
-    image: "/images/work-3.webp",
-  },
-  {
-    title: "Hand Writing",
-    category: "Web Development",
-    description:
-      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    author: {
-      name: "Jamie Jameson",
-      avatar: "/images/person_4.webp",
-    },
-    image: "/images/work-4.webp",
-  },
-  {
-    title: "Hand Writing",
-    category: "Web Development",
-    description:
-      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    author: {
-      name: "Jamie Jameson",
-      avatar: "/images/person_3.webp",
-    },
-    image: "/images/work-5.webp",
-  },
-  {
-    title: "Hand Writing",
-    category: "Web Development",
-    description:
-      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    author: {
-      name: "Jamie Jameson",
-      avatar: "/images/person_1.webp",
-    },
-    image: "/images/work-6.webp",
-  },
-];
-
+import { usePathname } from "next/navigation";
+import { WORKS } from "@/constants";
 export default function WorksSection() {
+  const pathName = usePathname();
   return (
-    <section className="py-28 px-4 md:px-6 relative  bg-accent">
+    <section
+      className={`py-28 px-4 md:px-6 relative ${
+        pathName === "/work" ? "bg-white" : "bg-accent"
+      } `}
+    >
+      <div className="custom-shape-divider-top-1734607374">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"
+            className="fill-white"
+          ></path>
+        </svg>
+      </div>
       <div className="custom-shape-divider-top-1734527401">
         <svg
           data-name="Layer 1"
@@ -96,7 +36,9 @@ export default function WorksSection() {
         >
           <path
             d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"
-            className="fill-accent"
+            className={` ${
+              pathName === "/work" ? "!fill-white" : "!fill-accent"
+            } `}
           ></path>
         </svg>
       </div>
@@ -104,7 +46,7 @@ export default function WorksSection() {
         <h2 className="h2 mb-12">OUR WORKS</h2>
 
         <div className="space-y-24">
-          {works.map((work, index) => (
+          {WORKS.map((work, index) => (
             <div
               key={index}
               className={`grid md:grid-cols-2 gap-8 items-center ${

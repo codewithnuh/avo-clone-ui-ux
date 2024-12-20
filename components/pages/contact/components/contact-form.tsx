@@ -7,7 +7,7 @@ import { MapPin, Phone, Mail, Globe } from "lucide-react";
 
 export default function ContactForm() {
   return (
-    <div className="container mx-auto px-4 py-16 max-w-6xl">
+    <div className="container mx-auto mb-36  px-4 py-16 max-w-6xl">
       <div className="text-center mb-12 space-y-4">
         <span className="text-sm text-primary uppercase tracking-wider">
           Contact us
@@ -19,9 +19,9 @@ export default function ContactForm() {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-[1fr,auto] gap-12 bg-gray-50/50">
+      <div className="grid lg:grid-cols-[1fr,auto] gap-12">
         <div className="bg-ace p-8 rounded-lg shadow-sm">
-          <form className="space-y-6">
+          <form className="space-y-6 bg-accent p-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <Input
                 placeholder="Your Name"
@@ -50,7 +50,7 @@ export default function ContactForm() {
         <div className="space-y-8 p-8">
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <div className="bg-red-600 p-2 rounded-full text-white">
+              <div className="bg-primary p-2 rounded-full text-white">
                 <MapPin className="h-5 w-5" />
               </div>
               <div>

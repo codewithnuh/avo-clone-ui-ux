@@ -7,6 +7,7 @@ import { FaPlay } from "react-icons/fa";
 import Fade from "embla-carousel-fade";
 import Autoplay from "embla-carousel-autoplay";
 import { Button } from "@/components/ui/button";
+import Counter from "@/components/shared/counter";
 
 // Type for the slide structure
 interface HeroSlide {
@@ -15,6 +16,8 @@ interface HeroSlide {
   title: string;
   description: string;
   cta: string;
+  projects?: number;
+  years?: number;
 }
 
 const heroSlides: HeroSlide[] = [
@@ -25,14 +28,16 @@ const heroSlides: HeroSlide[] = [
     description:
       "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cta: "Explore Projects",
+    projects: 400,
   },
   {
     id: 2,
     bgImage: "/images/bg_2.webp",
-    title: "Crafting Exceptional User Experiences",
+    title: "We Create Modern & Minimal Website",
     description:
       "We design and develop websites that deliver outstanding results for businesses.",
     cta: "Start Project",
+    years: 21,
   },
 ];
 
@@ -89,21 +94,27 @@ const HeroCarousel = () => {
                 {/* Overlay Content */}
                 <div className="container absolute mb-36 sm:mb-0 inset-0 flex sm:flex-row  flex-col-reverse justify-between sm:items-center  text-white">
                   <div className=" flex flex-col justify-center items-start">
-                    <h1 className="h1 max-w-lg sm:max-w-md">{slide.title}</h1>
+                    <h1 className="h1 max-w-lg sm:max-w-[29rem]">
+                      {slide.title}
+                    </h1>
                     <p className="text-lg mt-4 max-w-md">{slide.description}</p>
                     <Button className="mt-6">{slide.cta}</Button>
                   </div>
                   <div className="mt-60 text-sm  sm:mb-96">
                     <p
-                      className="font-bold text-2xl sm:text-5xl border-l-4 sm:border-l-0 px-2 sm:border-r-8
+                      className="font-bold text-2xl sm:text-5xl border-l-4 sm:border-l-0  sm:border-r-8
                      border-primary"
                     >
-                      21
+                      {slide.years ? (
+                        <Counter target={slide.years} duration={0.5} />
+                      ) : (
+                        <Counter target={slide.projects!} duration={0.5} />
+                      )}
                     </p>
                     <p className="text-muted-foreground text-left sm:text-right mt-2">
-                      Years of
-                      <br />
-                      experienced
+                      {slide.years
+                        ? "years of experience"
+                        : `projects completed`}
                     </p>
                   </div>
                 </div>
@@ -114,7 +125,7 @@ const HeroCarousel = () => {
 
         {/* Dot Navigation */}
         <div
-          className="absolute bottom-8 left-[20%]  sm:bottom-8 sm:left-1/2 transform -translate-x-1/2 flex space-x-4"
+          className="absolute bottom-20 left-[50%]  sm:bottom-8 sm:left-1/2 transform -translate-x-1/2 flex space-x-4"
           aria-label="Carousel navigation dots"
         >
           {scrollSnaps.map((_, index) => (

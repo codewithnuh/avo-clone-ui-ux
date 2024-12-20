@@ -251,3 +251,101 @@ Consistency and creativity are key to leveraging social media for sustainable bu
   },
   // Add 10 more articles following the same structure.
 ];
+
+export const FOOTER_LINKS: FooterLink[] = [
+  {
+    category: "Community",
+    links: [
+      { label: "Projects", href: "/#" },
+      { label: "Team", href: "/#" },
+      { label: "Reviews", href: "/#" },
+      { label: "FAQs", href: "/#" },
+    ],
+  },
+  {
+    category: "About Us",
+    links: [
+      { label: "Our Story", href: "/#" },
+      { label: "Meet the team", href: "/#" },
+      { label: "Careers", href: "/#" },
+    ],
+  },
+  {
+    category: "Company",
+    links: [
+      { label: "About Us", href: "/#" },
+      { label: "Press", href: "/#" },
+      { label: "Contact", href: "/#" },
+      { label: "Careers", href: "/#" },
+    ],
+  },
+];
+
+export const WORKS: WorkItem[] = [
+  {
+    title: "Cassette tape",
+    category: "Web Design",
+    description:
+      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    author: {
+      name: "Jamie Jameson",
+      avatar: "/images/person_1.webp",
+    },
+    image: "/images/work-1.webp",
+  },
+  {
+    title: "Miniwall Clock",
+    category: "Product Design",
+    description:
+      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    author: {
+      name: "Jamie Jameson",
+      avatar: "/images/person_2.webp",
+    },
+    image: "/images/work-2.webp",
+  },
+  {
+    title: "Avo Portfolio Agency",
+    category: "Web Design",
+    description:
+      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    author: {
+      name: "Jamie Jameson",
+      avatar: "/images/person_3.webp",
+    },
+    image: "/images/work-3.webp",
+  },
+  {
+    title: "Hand Writing",
+    category: "Web Development",
+    description:
+      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    author: {
+      name: "Jamie Jameson",
+      avatar: "/images/person_4.webp",
+    },
+    image: "/images/work-4.webp",
+  },
+  {
+    title: "Hand Writing",
+    category: "Web Development",
+    description:
+      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    author: {
+      name: "Jamie Jameson",
+      avatar: "/images/person_3.webp",
+    },
+    image: "/images/work-5.webp",
+  },
+  {
+    title: "Hand Writing",
+    category: "Web Development",
+    description:
+      "For far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    author: {
+      name: "Jamie Jameson",
+      avatar: "/images/person_1.webp",
+    },
+    image: "/images/work-6.webp",
+  },
+];
